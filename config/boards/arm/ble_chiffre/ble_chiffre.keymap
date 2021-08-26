@@ -12,6 +12,7 @@
 #define DEFAULT 0
 #define NUM_SYM 1
 #define NAV     2
+#define NEW	3
 
 / {
 	behaviors {
@@ -148,6 +149,15 @@
         };
 
     nav {
+            bindings = <
+    &trans &trans &trans &trans &none &none &kp END &kp UP &kp PG_UP &kp PG_UP
+    &trans &trans &trans &trans &none &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN
+    &rgb_ug RGB_TOG &rgb_ug RGB_EFF &none &none &none &kp PG_DN &none &kp GRAVE &kp BSLH &kp FSLH
+    &bt BT_CLR &trans &kp C_PREV &kp C_PP
+            >;
+        };
+
+    new {
             bindings = <
     &trans &trans &trans &trans &none &none &kp END &kp UP &kp PG_UP &kp PG_UP
     &trans &trans &trans &trans &none &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN
